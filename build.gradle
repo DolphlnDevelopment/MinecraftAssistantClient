@@ -1,0 +1,42 @@
+plugins {
+    id 'com.github.johnrengelman.shadow' version '7.0.0'
+    id 'java'
+}
+
+group 'com.dolphln.assistantclient'
+version '0.1'
+
+repositories {
+    mavenCentral()
+}
+
+jar {
+    manifest {
+        attributes(
+                'Main-Class': 'com.dolphln.assistantclient.Main'
+        )
+    }
+}
+
+dependencies {
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.7.0'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.7.0'
+
+    implementation 'de.sciss:sphinx4-data:1.0.0'
+    implementation 'net.sf.phat:sphinx4-core:5prealpha'
+
+    implementation 'com.google.code.gson:gson:2.8.7'
+}
+
+test {
+    useJUnitPlatform()
+}
+
+shadowJar {
+    relocate 'de.sciss', 'com.dolphln.libs'
+    relocate 'net.sf.phat', 'com.dolphln.libs'
+
+    relocate 'com.google.code.gson', 'com.dolphln.libs'
+}
+
+build.dependsOn shadowJar
