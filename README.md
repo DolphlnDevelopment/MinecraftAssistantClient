@@ -1,5 +1,7 @@
 # MinecraftAssistantClient
 
+[📺 Video](https://www.youtube.com/watch?v=gncfQwVr_qI)
+
 To use, open the jar by double clicking it. A `config.json` file will generate. Put your mc details there, and run it again. After loading all, it will show a message with a command (starts with /link). Run the command ingame, and you should be ready to go!
 
 # Commands
