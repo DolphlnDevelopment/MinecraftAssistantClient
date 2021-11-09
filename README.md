@@ -1,3 +1,5 @@
+# DEPRECATED. ALL IS HARDCODED. USE THE CLIENT ON THE OFFICIAL REPOSITORY [HERE](https://github.com/DolphlnDevelopment/VoiceMC)
+
 # MinecraftAssistantClient
 
 [📺 Video](https://www.youtube.com/watch?v=gncfQwVr_qI)
